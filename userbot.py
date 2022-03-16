@@ -53,14 +53,14 @@ def exit(_, msg):
     
     msg.edit("Собеседник покинул чат")
 
-# Команда поиска долбоеба
-@app.on_message(filters.command("hack", prefixes=".") & filters.me)
+# Команда поиска уровня аниме головного мозга
+@app.on_message(filters.command("anime_find", prefixes=".") & filters.me)
 def hack(_, msg):
     perc = 0
  
     while(perc < 100):
         try:
-            text = "👮‍ Поиск дoлбоеба в процессе ..." + str(perc) + "%"
+            text = "👮‍ Поиск анимешника в процессе ..." + str(perc) + "%"
             msg.edit(text)
  
             perc += random.randint(1, 3)
@@ -69,15 +69,15 @@ def hack(_, msg):
         except FloodWait as e:
             sleep(e.x)
  
-    msg.edit("🟢 Долбоеб найден!!!")
+    msg.edit("🟢 Анимешник найден!!!")
     sleep(3)
  
-    msg.edit("Сканирование уровня долбоебства ...")
+    msg.edit("Сканирование уровня аниме головного мозга ...")
     perc = 0
  
     while(perc < 100):
         try:
-            text = "Расшивровка уровня долбоебства" + str(perc) + "%"
+            text = "Расшивровка уровня аниме головного мозга" + str(perc) + "%"
             msg.edit(text)
  
             perc += random.randint(1, 5)
@@ -86,7 +86,8 @@ def hack(_, msg):
         except FloodWait as e:
             sleep(e.x)
  
-    msg.edit("Уровень долбоебства 100%")
+    msg.edit("Уровень аниме головного мозга 100%")
+
 
 #команда танос
 @app.on_message(filters.command("thanos", prefixes=".") & filters.me)
